@@ -2,6 +2,7 @@ package tutor.programacion;
 
 import java.time.LocalDate;
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -40,6 +41,8 @@ public class Principal extends Application {
         tableView.setPlaceholder(new Label("El TableView no contiene datos."));
 
         StackPane root = new StackPane();
+        root.setPadding(new Insets(10));
+        root.getStylesheets().add(getClass().getResource("table-view.css").toExternalForm());
         root.getChildren().add(tableView);
 
         Scene scene = new Scene(root, 300, 250);
